@@ -14,11 +14,31 @@ router.get("/getallcars", async (req, res) => {
 router.post("/addcar", async (req, res) => {
   try {
     console.log(req.body);
-    const newcar = new Car(req.body);
+    // const data = req.body;
+    // const newcar = new Car();
+    // const newcar = new Car({this.name:req.body,this.nameOfDriver:});
+    console.log(typeof req.body.phoneNo);
+    const newcar = new Car({
+      name: req.body.name,
+      nameOfDriver: req.body.nameOfDriver,
+      phoneNo: req.body.phoneNo,
+      nameOfShop: req.body.nameOfShop,
+      phoneNoShop: req.body.phoneNoShop,
+      address: req.body.address,
+      city: req.body.city,
+      image: req.body.image,
+      capacity: req.body.capacity,
+      fuelType: req.body.fuelType,
+      rentPerHour: req.body.rentPerHour,
+    });
     await newcar.save();
+    // await Car.create(req.body);
+    // const newbooking = new Booking({});
+    // await newbooking.save();
+
     res.send("Car added successfully");
   } catch (error) {
-    return res.status(400).json(error);
+    return res.status(400).json(error.message);
   }
 });
 

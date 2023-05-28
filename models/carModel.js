@@ -2,25 +2,25 @@ const mongoose = require("mongoose");
 
 const carSchema = new mongoose.Schema(
   {
-    name: { type: String, required: true },
+    name: { type: String },
     nameOfDriver: { type: String },
-    phoneNo: { type: Number },
+    phoneNo: { type: String },
     nameOfShop: { type: String },
     phoneNoShop: { type: String },
     address: { type: String },
     city: { type: String },
     phoneNoShop: { type: String },
-    image: { type: String, required: true },
-    capacity: { type: Number, required: true },
-    fuelType: { type: String, required: true },
+    image: { type: String },
+    capacity: { type: String },
+    fuelType: { type: String },
     bookedTimeSlots: [
       {
-        from: { type: String, required: true },
-        to: { type: String, required: true },
+        from: { type: String },
+        to: { type: String },
       },
     ],
 
-    rentPerHour: { type: Number, required: true },
+    rentPerHour: { type: String },
   },
   { timestamps: true }
 );
