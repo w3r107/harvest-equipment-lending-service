@@ -9,15 +9,13 @@ app.use("/api/otp/", require("./routes/otpRoutes"));
 app.use("/api/users/", require("./routes/usersRoute"));
 app.use("/api/bookings/", require("./routes/bookingsRoute"));
 
-// const path = require("path");
-// app.use(express.static(path.join(__dirname,'client/build')))
+const path = require("path");
+app.use(express.static(path.join(__dirname, "client/build")));
 
 // if (process.env.NODE_ENV === "production") {
 
-app.use("/", express.static("./client/build"));
-
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, ".client/build/index.html"));
+  res.sendFile(path.resolve(__dirname, "./client/build/index.html"));
 });
 // }
 
