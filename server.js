@@ -3,7 +3,9 @@ const app = express();
 const port = process.env.PORT || 5000;
 const dbConnection = require("./db");
 app.use(express.json());
-
+const multer = require("multer");
+const uploadMiddleware = multer({ dest: "uploads/" });
+const fs = require("fs");
 app.use("/api/cars/", require("./routes/carsRoute"));
 app.use("/api/otp/", require("./routes/otpRoutes"));
 app.use("/api/users/", require("./routes/usersRoute"));
