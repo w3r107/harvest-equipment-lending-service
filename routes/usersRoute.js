@@ -7,7 +7,7 @@ const User = require("../models/userModel");
 router.get("/:id", async (req, res) => {
   const idd = req.params.id;
   console.log(idd);
-  var id = mongoose.Types.ObjectId(idd);
+  //var id = mongoose.Types.ObjectId(idd);
   // var id = new Mongo.ObjectID(idd);
   //   console.log(idd);
   //   console.log(id);
