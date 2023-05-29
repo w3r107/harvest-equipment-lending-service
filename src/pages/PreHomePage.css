@@ -1,0 +1,38 @@
+.farmerContainer {
+    margin-top: 130px !important;
+    margin-bottom: 30px !important;
+  
+    
+}
+body{
+    background-image: url('https://images.pexels.com/photos/974314/pexels-photo-974314.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.farmer-title {
+    text-align: center;
+    font-size: 22px;
+}
+
+.card-titile {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.ok {
+    font-family: "cursive";
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.btn-explore {
+    margin-bottom: 10px;
+    text-align: center;
+    align-items: center;
+    margin-left: 25% !important;
+}
